@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1. 위에서 아래로 parsing하다가 js폴더가나오면 다운로드다끝내고 다시 parsing -> 페이지컨텐츠늦게뜸 -->
+    <script src=""></script>
+    <!-- 3. async는 boolean true임. 위에서아래로 parsing하다가 js폴더가나오면 다운로드시작하면서 안멈추고 계속내려감
+    -> js폴더열고 나머지 html들 parsing함-->
+    <!-- 단점 : 자바스크립트의 dom가 html이다 끝나기도전에 실행되서 문제발생가능성, 여전히 느림 -->
+    <script async src="1.async&defer.js"></script>
+    <!-- 4 : 위에서아래로 parsing하다가 js폴더가나오면 다운로드시작하면서 htmlparsing까지 끝날때까지 기다린뒤 js폴더실행 -->
+    <!-- <script defer src="1.async&defer.js"></script> -->
+
+    <!-- *async와 defer의 차이 -->
+    <!-- 만약 a,b,c.js파일들이 있다고 가정할때 async는 다운로드 먼저끝난애들순으로해서 중구난방 -->
+    <!-- defer은 완전히 htmlparsing다끝나고 a,b,c순으로 차례로 실행됨 -->
+    
+</head>
+<body>
+    <!-- 2. 위에서 아래로 parsing하고 fetch(서버에서받아오기)하고나서 js폴더 다운 -> 페이지컨텐츠는 빨리뜨나 자바스크립트
+    로활용한부분이 늦게뜸 -->
+    <script></script>
+</body>
+</html>
